@@ -44,27 +44,32 @@ p {
   padding: 0px;
 }
 
-.container {
-  width: 1158px;
+img {
+  display: block;
 }
 
-header {
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
   border-bottom: 1px solid #e7e9fc;
 }
 
-header .container {
+.header .container {
   margin: 24px auto;
   display: flex;
   justify-content: space-between;
-
 }
 
-header nav {
+.header-navigation {
   display: flex;
-  gap: 76px;
+  align-items: center;
 }
 
-header nav ul {
+.header-navigation ul {
   display: flex;
   gap: 40px;
 }
@@ -77,6 +82,7 @@ header nav ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 
 .header-logo-second-part {
@@ -87,6 +93,7 @@ header nav ul {
   font-weight: 500;
   font-size: 16px;
   color: var(--prime-color);
+  padding: 24px 0;
 }
 
 .header-nav:focus {
@@ -102,7 +109,7 @@ header nav ul {
   text-decoration: underline;
 }
 
-.header-address ul {
+.header-address-ul {
   font-style: normal;
   display: flex;
   gap: 40px;
@@ -123,11 +130,8 @@ header nav ul {
 
 /* hero */
 .hero .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
+  justify-content: center;
 }
 
 .hero-h-main {
@@ -138,13 +142,21 @@ header nav ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: #fff;
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .hero {
   background-color: var(--prime-color);
+  padding: 188px 0;
 }
 
 .hero-button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  margin: 0 auto;
   color: #fff;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -153,7 +165,7 @@ header nav ul {
   cursor: pointer;
   margin-top: 48px;
   padding: 16px 32px;
-
+  border-radius: 4px;
 }
 
 .hero-button:hover {
@@ -165,11 +177,29 @@ header nav ul {
 }
 
 /* advanteges */
+.advanteges {
+  padding: 120px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .advanteges .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.advanteges-li {
+  width: calc((100% - 72px) / 4);
 }
 
 .advanteges .container ul {
@@ -183,17 +213,17 @@ header nav ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--prime-color);
+  margin-bottom: 8px;
 }
 
 .advanteges-p {
   color: var(--second-color);
-  padding-top: 8px;
+
 }
 
 /* our-team */
 .our-team .container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -202,10 +232,13 @@ header nav ul {
   background-color: #f4f4fd;
 }
 
-.our-team ul {
+.our-team-ul {
   display: flex;
   gap: 24px;
-  padding-top: 72px;
+}
+
+.our-team-li-border {
+  padding: 32px 0;
 }
 
 .our-team-main-h {
@@ -216,9 +249,11 @@ header nav ul {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 
 .our-team-li {
+  width: calc((100% - 72px) / 4);
   background-color: #FFFFFF;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -230,11 +265,11 @@ header nav ul {
   line-height: 1.2;
   padding-top: 32px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .our-team p {
   color: var(--second-color);
-  padding-top: 8px;
   padding-bottom: 32px;
   text-align: center;
 }
@@ -257,7 +292,7 @@ header nav ul {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 
@@ -301,6 +336,8 @@ header nav ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-bottom: 16px;
+  display: inline-block;
 }
 
 .footer-logo-second-part {
@@ -315,5 +352,5 @@ header nav ul {
 
 .footer-p {
   color: #f4f4fd;
-  padding-top: 16px;
+
 }
